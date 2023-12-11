@@ -36,6 +36,7 @@ import envelope from "./envelope.svg";
 import location from "./location-dot.svg";
 import clock from "./clock.svg";
 import bgVideo from "./videos/video-2.mp4";
+import tradeVideo from "./videos/trading.mp4";
 
 export {
   airbnb,
@@ -76,4 +77,5 @@ export {
   phone,
   clock,
   bgVideo,
+  tradeVideo,
 };

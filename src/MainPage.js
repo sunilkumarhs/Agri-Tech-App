@@ -23,7 +23,7 @@ const MainPage = () => (
         autoPlay
         loop
         muted
-        className="object-cover fixed -z-10"
+        className="object-cover fixed z-[-1] w-full h-full"
       />
       <div className={` ${styles.boxWidth}`}>
         <Hero />
