@@ -18,9 +18,8 @@ const styles = {
   marginY: "sm:my-16 my-3",
 
   tdata:
-    "py-1 px-1 sm:py-2 text-sm sm:text-l font-bold text-center border-y border-white",
-  thead:
-    "py-1 px-1 sm:py-2 sm:text-xl text-l text-center border-y border-white font-bold",
+    "py-1 px-1 text-sm sm:text-l font-bold text-center border-y border-white",
+  thead: "py-1 px-1 text-l text-center border-y border-white font-bold",
 };
 
 export const layout = {

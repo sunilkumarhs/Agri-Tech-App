@@ -239,7 +239,7 @@ const FarmerPrfEdit = () => {
                           id="username"
                           placeholder="userid"
                           className="block w-full rounded-md border py-1 px-10 sm:py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:text-xl sm:leading-8"
-                          value={auth.currentUser.email}
+                          value={user}
                           disabled
                         />
                       </div>

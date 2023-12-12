@@ -7,6 +7,11 @@ import Login from "./components/loginSection/Login";
 import FarmerReg from "./components/loginSection/FarmerReg";
 import BuyerReg from "./components/loginSection/BuyerReg";
 import FarmerSection from "./components/bussinessSection/FarmerSection";
+import FarmerPrfEdit from "./components/loginSection/FarmerPrfEdit";
+import BuyerPrfEdit from "./components/loginSection/BuyerPrfEdit";
+import BuyerSection from "./components/bussinessSection/BuyerSection";
+import FertilizerList from "./components/fertilizerData/FertilizerList";
+import AgriProductList from "./components/agriProductData/AgriProductList";
 
 const AppLayout = () => {
   return (
@@ -40,6 +45,26 @@ const appRouter = createBrowserRouter([
       {
         path: "/FarmerSection",
         element: <FarmerSection />,
+      },
+      {
+        path: "/BuyerSection",
+        element: <BuyerSection />,
+      },
+      {
+        path: "/FarmerPrfEdit",
+        element: <FarmerPrfEdit />,
+      },
+      {
+        path: "/BuyerPrfEdit",
+        element: <BuyerPrfEdit />,
+      },
+      {
+        path: "/FertilizerList",
+        element: <FertilizerList />,
+      },
+      {
+        path: "/AgriProductList",
+        element: <AgriProductList />,
       },
     ],
     errorElement: <Error />,

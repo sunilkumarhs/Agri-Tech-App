@@ -38,7 +38,6 @@ const BuyerPrfEdit = () => {
   }, [user, buyers]);
 
   let buyUser = null;
-
   buyer.map((buy) => (buyUser = doc(db, "buyers", buy.id)));
 
   const {
@@ -128,7 +127,7 @@ const BuyerPrfEdit = () => {
                       id="username"
                       placeholder="userid"
                       className="block w-full rounded-md border py-1 px-10 sm:py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:text-xl sm:leading-8"
-                      value={auth.currentUser.email}
+                      value={user}
                       disabled
                     />
                   </div>
@@ -144,8 +143,6 @@ const BuyerPrfEdit = () => {
             <p className="mt-0 sm:mt-1 text-sm sm:text-l leading-2 sm:leading-6 text-white">
               Use a permanent address where you can receive mail.
             </p>
-            {/* {buyer.map((buy) => (
-              <div key={buy.id}> */}
             <div className="sm:col-span-3">
               <div className="mt-3 sm:mt-5">
                 <input
@@ -370,8 +367,6 @@ const BuyerPrfEdit = () => {
                 )}
               </div>
             </div>
-            {/* </div>
-            ))} */}
           </div>
         </div>
 

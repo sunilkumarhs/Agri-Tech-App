@@ -73,7 +73,7 @@ const Navbar = () => {
         )}
         {farmer[0]?.UserType === "farmer" ? (
           <>
-            <Link to="/FertilizersDisplay">
+            <Link to="/FertilizerList">
               <li
                 className={`font-poppins font-normal cursor-pointer text-[16px] mr-3 py-3 px-5 text-white nav-links nav-link`}
               >
@@ -147,7 +147,7 @@ const Navbar = () => {
                     Price_List
                   </li>
                 </Link>
-                <Link to="/FertilizersDisplay">
+                <Link to="/FertilizerList">
                   <li
                     className={`font-poppins font-normal cursor-pointer text-[16px] text-white px-2 py-3 nav-link`}
                   >

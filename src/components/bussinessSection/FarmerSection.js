@@ -11,6 +11,7 @@ import {
   addDoc,
   deleteDoc,
 } from "firebase/firestore";
+import FarmerNavbar from "./FarmerNavbar";
 
 const FarmerSection = () => {
   const [products, setProducts] = useState([]);
@@ -82,7 +83,9 @@ const FarmerSection = () => {
   return (
     <div className="w-full overflow-hidden">
       <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}>{/* <BNavBar /> */}</div>
+        <div className={`${styles.boxWidth}`}>
+          <FarmerNavbar />
+        </div>
       </div>
       <div className={`${styles.flexStart}`}>
         <video
@@ -106,30 +109,30 @@ const FarmerSection = () => {
       <div
         className={`flex-1 ${styles.flexCenter} flex-col xl:px-0 sm:px-16 px-3`}
       >
-        <label className="flex-1 font-poppins font-bold sm:text-6xl text-l mt-0 sm:mt-2 text-white leading-8 sm:leading-16">
+        <label className="flex-1 font-poppins font-bold sm:text-4xl text-l mt-0 sm:mt-2 text-white leading-8 sm:leading-14">
           Welcome To <span className="text-gradient">Farmer Trading </span>
           Section
         </label>
       </div>
       <div
-        className={`flex-1 ${styles.flexCenter} flex-col xl:px-0 sm:px-10 px-1 py-0 sm:py-1`}
+        className={`flex-1 ${styles.flexCenter} flex-col xl:px-0 sm:px-10 px-1`}
       >
         <div className="mx-auto mt-1 sm:mt-5 max-w-2xl rounded-2xl border border-white lg:mx-0 lg:flex lg:max-w-none">
           <div className="p-1 sm:p-3 lg:flex-auto">
-            <h3 className="text-l mb-1 font-bold tracking-tight text-white sm:text-3xl">
+            <h3 className="text-l mb-1 font-bold tracking-tight text-white sm:text-2xl">
               Add Your Products
             </h3>
             <form
               onSubmit={handleSubmit}
               autoComplete="off"
-              className="border border-black/40 rounded-md p-1 sm:p-4 bg-transparent sm:backdrop-blur-md"
+              className="border border-black/40 rounded-md p-1 sm:p-2 bg-transparent sm:backdrop-blur-md"
             >
-              <div className="border-b border-gray-900/10 pb-2 sm:pb-4">
+              <div className="border-b border-gray-900/10 pb-2">
                 <div className=" grid grid-cols-2 gap-x-3 sm:gap-x-6 gap-y-1 sm:grid-cols-5">
                   <div className=" col-span-1 sm:col-span-1">
                     <label
                       htmlFor="pType"
-                      className="block text-l leading-2 sm:text-xl font-medium sm:leading-6 text-white"
+                      className="block text-l leading-2 font-medium sm:leading-6 text-white"
                     >
                       Product Type
                     </label>
@@ -137,7 +140,7 @@ const FarmerSection = () => {
                       <select
                         id="pType"
                         name="pType"
-                        className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 sm:py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:max-w-xs sm:text-xl sm:leading-8 ${
+                        className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:max-w-xs sm:text-xl sm:leading-8 ${
                           errors.pType ? "input_Error" : ""
                         }`}
                         value={values.pType}
@@ -161,7 +164,7 @@ const FarmerSection = () => {
                   <div className=" col-span-1 sm:col-span-1">
                     <label
                       htmlFor="pName"
-                      className="block text-l leading-2 sm:text-xl font-medium sm:leading-6 text-white"
+                      className="block text-l leading-2 font-medium sm:leading-6 text-white"
                     >
                       Product Name
                     </label>
@@ -170,7 +173,7 @@ const FarmerSection = () => {
                         <select
                           id="pName"
                           name="pName"
-                          className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 sm:py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:max-w-xs sm:text-xl sm:leading-8 ${
+                          className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:max-w-xs sm:text-xl sm:leading-8 ${
                             errors.pType ? "input_Error" : ""
                           }`}
                           value={values.pName}
@@ -200,7 +203,7 @@ const FarmerSection = () => {
                         <select
                           id="pName"
                           name="pName"
-                          className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 sm:py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:max-w-xs sm:text-xl sm:leading-8 ${
+                          className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:max-w-xs sm:text-xl sm:leading-8 ${
                             errors.pType ? "input_Error" : ""
                           }`}
                           value={values.pName}
@@ -228,7 +231,7 @@ const FarmerSection = () => {
                         <select
                           id="pName"
                           name="pName"
-                          className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 sm:py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:max-w-xs sm:text-xl sm:leading-8 ${
+                          className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:max-w-xs sm:text-xl sm:leading-8 ${
                             errors.pType ? "input_Error" : ""
                           }`}
                           value={values.pName}
@@ -259,7 +262,7 @@ const FarmerSection = () => {
                         <select
                           id="pName"
                           name="pName"
-                          className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 sm:py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:max-w-xs sm:text-xl sm:leading-8 ${
+                          className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:max-w-xs sm:text-xl sm:leading-8 ${
                             errors.pType ? "input_Error" : ""
                           }`}
                           value={values.pName}
@@ -288,7 +291,7 @@ const FarmerSection = () => {
                         <select
                           id="pName"
                           name="pName"
-                          className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 sm:py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:max-w-xs sm:text-xl sm:leading-8 ${
+                          className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:max-w-xs sm:text-xl sm:leading-8 ${
                             errors.pType ? "input_Error" : ""
                           }`}
                           value={values.pName}
@@ -305,7 +308,7 @@ const FarmerSection = () => {
                         <select
                           id="pName"
                           name="pName"
-                          className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 sm:py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:max-w-xs sm:text-xl sm:leading-8 ${
+                          className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:max-w-xs sm:text-xl sm:leading-8 ${
                             errors.pType ? "input_Error" : ""
                           }`}
                           value={values.pName}
@@ -334,7 +337,7 @@ const FarmerSection = () => {
                           name="pName"
                           id="pName"
                           placeholder="select-the-type"
-                          className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 sm:py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:text-xl sm:leading-8 `}
+                          className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:text-xl sm:leading-8 `}
                           disabled
                         />
                       )}
@@ -347,7 +350,7 @@ const FarmerSection = () => {
                   <div className=" col-span-1 sm:col-span-1">
                     <label
                       htmlFor="qGrade"
-                      className="block text-l leading-2 sm:text-xl font-medium sm:leading-6 text-white"
+                      className="block text-l leading-2 font-medium sm:leading-6 text-white"
                     >
                       Quality Grade
                     </label>
@@ -355,7 +358,7 @@ const FarmerSection = () => {
                       <select
                         id="qGrade"
                         name="qGrade"
-                        className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 sm:py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:max-w-xs sm:text-xl sm:leading-8 ${
+                        className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:max-w-xs sm:text-xl sm:leading-8 ${
                           errors.pType ? "input_Error" : ""
                         }`}
                         value={values.qGrade}
@@ -376,13 +379,13 @@ const FarmerSection = () => {
                   <div className=" col-span-1 sm:col-span-1">
                     <label
                       htmlFor="qty"
-                      className="text-l leading-2 sm:text-xl font-medium sm:leading-6 text-white sm:flex hidden"
+                      className="text-l leading-2 font-medium sm:leading-6 text-white sm:flex hidden"
                     >
                       Quantity In Quintal
                     </label>
                     <label
                       htmlFor="qty"
-                      className="block text-l leading-2 sm:text-xl font-medium sm:leading-6 text-white sm:hidden"
+                      className="block text-l leading-2 font-medium sm:leading-6 text-white sm:hidden"
                     >
                       Qty In Quintal
                     </label>
@@ -391,7 +394,7 @@ const FarmerSection = () => {
                         type="number"
                         name="qty"
                         id="qty"
-                        className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 sm:py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:text-xl sm:leading-8 ${
+                        className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:text-xl sm:leading-8 ${
                           errors.pType ? "input_Error" : ""
                         }`}
                         value={values.qty}
@@ -407,13 +410,13 @@ const FarmerSection = () => {
                   <div className=" col-span-1 sm:col-span-1">
                     <label
                       htmlFor="qtyRs"
-                      className=" text-l leading-2 sm:text-xl font-medium sm:leading-6 text-white sm:flex hidden"
+                      className=" text-l leading-2 font-medium sm:leading-6 text-white sm:flex hidden"
                     >
                       Price In ₹ per Quital
                     </label>
                     <label
                       htmlFor="qtyRs"
-                      className="block text-l leading-2 sm:text-xl font-medium sm:leading-6 text-white sm:hidden"
+                      className="block text-l leading-2 font-medium sm:leading-6 text-white sm:hidden"
                     >
                       ₹ per Quital
                     </label>
@@ -422,7 +425,7 @@ const FarmerSection = () => {
                         type="number"
                         name="qtyRs"
                         id="qtyRs"
-                        className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 sm:py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:text-xl sm:leading-8 ${
+                        className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:text-xl sm:leading-8 ${
                           errors.pType ? "input_Error" : ""
                         }`}
                         value={values.qtyRs}
@@ -440,7 +443,7 @@ const FarmerSection = () => {
               <div className="mt-1 sm:mt-3 flex items-center justify-end gap-x-6">
                 <button
                   type="button"
-                  className="text-l leading-2 sm:text-xl font-bold sm:leading-6 bg-blue-gradient text-white cancle-button px-1 py-1 sm:px-3 sm:py-2 rounded-md shadow-sm ring-1 ring-inset ring-gray-300"
+                  className="text-l leading-2 font-bold sm:leading-6 bg-blue-gradient text-white cancle-button px-1 py-1 sm:px-3 rounded-md shadow-sm ring-1 ring-inset ring-gray-300"
                   onClick={handleReset}
                 >
                   Cancel
@@ -448,7 +451,7 @@ const FarmerSection = () => {
                 <button
                   disabled={isSubmitting}
                   type="submit"
-                  className="rounded-md px-1 py-1 sm:px-3 sm:py-2 text-l leading-2 sm:leading-6 sm:text-xl bg-blue-gradient font-bold text-white shadow-sm add-button ring-1 ring-inset ring-gray-300"
+                  className="rounded-md px-1 py-1 sm:px-3 text-l leading-2 sm:leading-6 bg-blue-gradient font-bold text-white shadow-sm add-button ring-1 ring-inset ring-gray-300"
                 >
                   Add Product
                 </button>
@@ -458,12 +461,12 @@ const FarmerSection = () => {
         </div>
       </div>
 
-      <div className="backdrop-blur-sm sm:backdrop-blur-md px-1 pt-2 sm:px-4 sm:pt-3 pb-4 rounded-sm border border-white flex-1 sm:m-2 m-1 mt-2">
-        <h3 className="text-white text-l sm:text-3xl font-medium">
+      <div className="backdrop-blur-sm sm:backdrop-blur-md px-1 pt-2 sm:px-4 pb-4 rounded-sm border border-white flex-1 sm:m-2 m-1 mt-2">
+        <h3 className="text-white text-l sm:text-2xl font-medium">
           Products Table
         </h3>
-        <div className="border-x border-white rounded-sm mt-3">
-          <table className="w-full text-white table-auto">
+        <div className="border-x border-white rounded-sm mt-2 overflow-scroll no-scrollbar ">
+          <table className="w-full text-white">
             <thead className="bg-neutral-400">
               <tr>
                 <th className={styles.thead}>ID</th>
@@ -487,7 +490,7 @@ const FarmerSection = () => {
                   <td className={styles.tdata}>
                     <button
                       type="button"
-                      className="text-sm leading-2 sm:text-xl font-bold sm:leading-6 bg-blue-gradient text-white cancle-button px-1 py-1 sm:px-3 sm:py-2 rounded-md shadow-sm ring-1 ring-inset ring-gray-300"
+                      className="text-sm leading-2 sm:text-l font-bold sm:leading-6 bg-blue-gradient text-white cancle-button px-1 py-1 sm:px-3 rounded-md shadow-sm ring-1 ring-inset ring-gray-300"
                       onClick={() => {
                         deleteItem(prd.id);
                       }}
