@@ -16,6 +16,18 @@
       scrollbar-width: none;  /* Firefox */
   }
 }
+/* table {
+  width: 100%;
+  color: white;
+  overflow: scroll;
+  height: 15rem;
+
+}
+thead {
+  --tw-bg-opacity: 1;
+  background-color: rgb(163 163 163 / var(--tw-bg-opacity));;
+  position: sticky;
+} */
 
 :root {
   --black-gradient: linear-gradient(

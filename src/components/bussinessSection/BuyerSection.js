@@ -108,58 +108,44 @@ const BuyerSection = () => {
 
   return (
     <>
-      <div className="w-full overflow-hidden">
-        <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
-          <div className={`${styles.boxWidth}`}>
-            <BuyerNavbar />
-          </div>
-        </div>
+      <div className="w-full">
+        <BuyerNavbar />
         <div className={`${styles.flexStart}`}>
           <video
+            src={tradeVideo}
             autoPlay
             loop
             muted
-            style={{
-              position: "absolute",
-              width: "100%",
-              left: "50%",
-              top: "50%",
-              height: "100%",
-              objectFit: "cover",
-              transform: "translate(-50%, -50%)",
-              zIndex: "-1",
-            }}
-          >
-            <source src={tradeVideo} type="video/mp4" />
-          </video>
+            className="object-cover fixed z-[-1] w-full h-full"
+          />
         </div>
         <div
           className={`flex-1 ${styles.flexCenter} flex-col xl:px-0 sm:px-16 px-3`}
         >
-          <label className="flex-1 font-poppins font-bold sm:text-6xl text-l mt-0 sm:mt-2 text-white leading-8 sm:leading-16">
+          <label className="flex-1 font-poppins font-bold sm:text-4xl text-l mt-0 sm:mt-2 text-white leading-8 sm:leading-14">
             Welcome To <span className="text-gradient">Buyer Trading </span>
             Section
           </label>
         </div>
         <div
-          className={`flex-1 ${styles.flexCenter} flex-col xl:px-0 sm:px-10 px-1 py-0 sm:py-1`}
+          className={`flex-1 ${styles.flexCenter} flex-col xl:px-0 sm:px-10 px-1 py-0`}
         >
           <div className="mx-auto mt-1 sm:mt-5 max-w-2xl rounded-2xl border border-white lg:mx-0 lg:flex lg:max-w-none">
             <div className="p-1 sm:p-3 lg:flex-auto">
-              <h3 className="text-l mb-1 font-bold tracking-tight text-white sm:text-3xl">
+              <h3 className="text-l mb-1 font-bold tracking-tight text-white sm:text-2xl">
                 Search Here for Required Product
               </h3>
               <form
                 onSubmit={handleSubmit}
                 autoComplete="off"
-                className="border border-black/40 rounded-md p-1 sm:p-4 bg-transparent sm:backdrop-blur-md"
+                className="border border-black/40 rounded-md p-1 sm:p-2 bg-transparent sm:backdrop-blur-md"
               >
-                <div className="border-b border-gray-900/10 pb-2 sm:pb-4">
+                <div className="border-b border-gray-900/10 pb-2">
                   <div className=" grid grid-cols-2 gap-x-3 sm:gap-x-6 gap-y-1 sm:grid-cols-5">
                     <div className=" col-span-1 sm:col-span-1">
                       <label
                         htmlFor="pType"
-                        className="block text-l leading-2 sm:text-xl font-medium sm:leading-6 text-white"
+                        className="block text-l leading-2 font-medium sm:leading-6 text-white"
                       >
                         Product Type
                       </label>
@@ -167,7 +153,7 @@ const BuyerSection = () => {
                         <select
                           id="pType"
                           name="pType"
-                          className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 sm:py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:max-w-xs sm:text-xl sm:leading-8`}
+                          className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:max-w-xs sm:text-xl sm:leading-8`}
                           value={values.pType}
                           onChange={handleChange}
                           onBlur={handleBlur}
@@ -186,7 +172,7 @@ const BuyerSection = () => {
                     <div className=" col-span-1 sm:col-span-1">
                       <label
                         htmlFor="pName"
-                        className="block text-l leading-2 sm:text-xl font-medium sm:leading-6 text-white"
+                        className="block text-l leading-2 font-medium sm:leading-6 text-white"
                       >
                         Product Name
                       </label>
@@ -195,7 +181,7 @@ const BuyerSection = () => {
                           <select
                             id="pName"
                             name="pName"
-                            className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 sm:py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:max-w-xs sm:text-xl sm:leading-8`}
+                            className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:max-w-xs sm:text-xl sm:leading-8`}
                             value={values.pName}
                             onChange={handleChange}
                             onBlur={handleBlur}
@@ -223,7 +209,7 @@ const BuyerSection = () => {
                           <select
                             id="pName"
                             name="pName"
-                            className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 sm:py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:max-w-xs sm:text-xl sm:leading-8`}
+                            className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:max-w-xs sm:text-xl sm:leading-8`}
                             value={values.pName}
                             onChange={handleChange}
                             onBlur={handleBlur}
@@ -249,7 +235,7 @@ const BuyerSection = () => {
                           <select
                             id="pName"
                             name="pName"
-                            className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 sm:py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:max-w-xs sm:text-xl sm:leading-8`}
+                            className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:max-w-xs sm:text-xl sm:leading-8`}
                             value={values.pName}
                             onChange={handleChange}
                             onBlur={handleBlur}
@@ -282,7 +268,7 @@ const BuyerSection = () => {
                           <select
                             id="pName"
                             name="pName"
-                            className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 sm:py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:max-w-xs sm:text-xl sm:leading-8`}
+                            className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:max-w-xs sm:text-xl sm:leading-8`}
                             value={values.pName}
                             onChange={handleChange}
                             onBlur={handleBlur}
@@ -309,7 +295,7 @@ const BuyerSection = () => {
                           <select
                             id="pName"
                             name="pName"
-                            className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 sm:py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:max-w-xs sm:text-xl sm:leading-8`}
+                            className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:max-w-xs sm:text-xl sm:leading-8`}
                             value={values.pName}
                             onChange={handleChange}
                             onBlur={handleBlur}
@@ -324,7 +310,7 @@ const BuyerSection = () => {
                           <select
                             id="pName"
                             name="pName"
-                            className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 sm:py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:max-w-xs sm:text-xl sm:leading-8`}
+                            className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:max-w-xs sm:text-xl sm:leading-8`}
                             value={values.pName}
                             onChange={handleChange}
                             onBlur={handleBlur}
@@ -353,7 +339,7 @@ const BuyerSection = () => {
                             name="pName"
                             id="pName"
                             placeholder="select-the-type"
-                            className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 sm:py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:text-xl sm:leading-8 `}
+                            className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm sm:text-l leading-2 sm:leading-8 `}
                             disabled
                           />
                         )}
@@ -363,7 +349,7 @@ const BuyerSection = () => {
                     <div className=" col-span-1 sm:col-span-1">
                       <label
                         htmlFor="qGrade"
-                        className="block text-l leading-2 sm:text-xl font-medium sm:leading-6 text-white"
+                        className="block text-l leading-2 font-medium sm:leading-6 text-white"
                       >
                         Quality Grade
                       </label>
@@ -371,7 +357,7 @@ const BuyerSection = () => {
                         <select
                           id="qGrade"
                           name="qGrade"
-                          className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 sm:py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:max-w-xs sm:text-xl sm:leading-8`}
+                          className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:max-w-xs sm:text-xl sm:leading-8`}
                           value={values.qGrade}
                           onChange={handleChange}
                           onBlur={handleBlur}
@@ -387,13 +373,13 @@ const BuyerSection = () => {
                     <div className=" col-span-1 sm:col-span-1">
                       <label
                         htmlFor="qty"
-                        className="text-l leading-2 sm:text-xl font-medium sm:leading-6 text-white sm:flex hidden"
+                        className="text-l leading-2 font-medium sm:leading-6 text-white sm:flex hidden"
                       >
                         Quantity In Quintal
                       </label>
                       <label
                         htmlFor="qty"
-                        className="block text-l leading-2 sm:text-xl font-medium sm:leading-6 text-white sm:hidden"
+                        className="block text-l leading-2 font-medium sm:leading-6 text-white sm:hidden"
                       >
                         Qty In Quintal
                       </label>
@@ -402,7 +388,7 @@ const BuyerSection = () => {
                           type="number"
                           name="qty"
                           id="qty"
-                          className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 sm:py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:text-xl sm:leading-8`}
+                          className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:text-l sm:leading-8`}
                           value={values.qty}
                           onChange={handleChange}
                           onBlur={handleBlur}
@@ -413,13 +399,13 @@ const BuyerSection = () => {
                     <div className=" col-span-1 sm:col-span-1">
                       <label
                         htmlFor="qtyRs"
-                        className="text-l leading-2 sm:text-xl font-medium sm:leading-6 text-white sm:flex hidden"
+                        className="text-l leading-2 font-medium sm:leading-6 text-white sm:flex hidden"
                       >
                         Price In ₹ per Quital
                       </label>
                       <label
                         htmlFor="qtyRs"
-                        className="block text-l leading-2 sm:text-xl font-medium sm:leading-6 text-white sm:hidden"
+                        className="block text-l leading-2 font-medium sm:leading-6 text-white sm:hidden"
                       >
                         ₹ per Quital
                       </label>
@@ -428,7 +414,7 @@ const BuyerSection = () => {
                           type="number"
                           name="qtyRs"
                           id="qtyRs"
-                          className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 sm:py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:text-xl sm:leading-8`}
+                          className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:text-l sm:leading-8`}
                           value={values.qtyRs}
                           onChange={handleChange}
                           onBlur={handleBlur}
@@ -441,7 +427,7 @@ const BuyerSection = () => {
                 <div className="mt-1 sm:mt-3 flex items-center justify-end gap-x-6">
                   <button
                     type="button"
-                    className="text-l leading-2 sm:text-xl font-bold sm:leading-6 bg-blue-gradient text-white cancle-button px-1 py-1 sm:px-3 sm:py-2 rounded-md shadow-sm ring-1 ring-inset ring-gray-300"
+                    className="text-l leading-2 font-bold sm:leading-6 bg-blue-gradient text-white cancle-button px-1 py-1 sm:px-3 rounded-md shadow-sm ring-1 ring-inset ring-gray-300"
                     onClick={handleReset}
                   >
                     Clear
@@ -449,7 +435,7 @@ const BuyerSection = () => {
                   <button
                     disabled={isSubmitting}
                     type="submit"
-                    className="rounded-md px-1 py-1 sm:px-3 sm:py-2 text-l leading-2 sm:leading-6 sm:text-xl bg-blue-gradient font-bold text-white add-button shadow-sm ring-1 ring-inset ring-gray-300"
+                    className="rounded-md px-1 py-1 sm:px-3 text-l leading-2 sm:leading-6 bg-blue-gradient font-bold text-white add-button shadow-sm ring-1 ring-inset ring-gray-300"
                   >
                     Search
                   </button>
@@ -459,11 +445,11 @@ const BuyerSection = () => {
           </div>
         </div>
 
-        <div className="backdrop-blur-sm sm:backdrop-blur-md px-1 pt-2 sm:px-4 sm:pt-3 pb-4 rounded-sm border border-white flex-1 sm:m-2 m-1 mt-2">
-          <h3 className="text-white text-l sm:text-3xl font-medium">
+        <div className="backdrop-blur-sm sm:backdrop-blur-md px-1 pt-2 sm:px-4 pb-4 rounded-sm border border-white flex-1 sm:m-2 m-1 mt-2">
+          <h3 className="text-white text-l sm:text-2xl font-medium">
             Result Table of Products
           </h3>
-          <div className="border-x border-white rounded-sm mt-3">
+          <div className="border-x border-white rounded-sm mt-2 overflow-auto sm:h-[27vh] h-[50vh] no-scrollbar ">
             <table className="w-full text-white table-auto">
               <thead className="bg-neutral-400">
                 <tr>
@@ -488,7 +474,7 @@ const BuyerSection = () => {
                     <td className={styles.tdata}>
                       <button
                         type="button"
-                        className="text-sm leading-2 sm:text-xl font-bold sm:leading-6 bg-blue-gradient text-white cancle-button px-1 py-1 sm:px-3 sm:py-2 rounded-md shadow-sm ring-1 ring-inset ring-gray-300"
+                        className="text-sm leading-2 sm:text-l font-bold sm:leading-6 bg-blue-gradient text-white cancle-button px-1 py-1 sm:px-3 rounded-md shadow-sm ring-1 ring-inset ring-gray-300"
                         onClick={() => {
                           handleOwner(prd.UserID);
                         }}
@@ -512,7 +498,7 @@ const BuyerSection = () => {
         >
           <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
 
-          <form className="fixed inset-0 z-10 overflow-y-auto">
+          <form className="fixed inset-0 z-10 overflow-y-auto mt-20">
             <div className="flex min-h-full items-end justify-center p-10 text-center sm:items-center sm:p-0">
               <div className="back-sinup relative transform overflow-hidden rounded-lg text-left shadow-xl transition-all max-w-[600px] min-w-[250px] sm:my-4 sm:w-full  sm:max-w-[800px] sm:min-w-[300px]">
                 <div className=" px-3 pb-4 pt-5 sm:p-6 sm:pb-2">

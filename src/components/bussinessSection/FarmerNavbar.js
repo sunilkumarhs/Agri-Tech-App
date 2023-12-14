@@ -73,7 +73,7 @@ const FarmerNavbar = () => {
 
   return (
     <>
-      <nav className="w-full flex  justify-between items-center ">
+      <nav className="w-full flex  justify-between items-center bg-primary navbar px-5 sm:px-8">
         <Link to="/">
           <img
             src={logo}
@@ -174,7 +174,7 @@ const FarmerNavbar = () => {
         >
           <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
 
-          <form className="fixed inset-0 z-10 overflow-y-auto">
+          <form className="fixed inset-0 z-10 overflow-y-auto sm:mt-20 mt-5">
             <div className="flex min-h-full items-end justify-center p-10 text-center sm:items-center sm:p-0">
               <div className="back-sinup relative transform overflow-hidden rounded-lg text-left shadow-xl transition-all max-w-[600px] min-w-[250px] sm:my-4 sm:max-w-4xl sm:w-[600px] sm:min-w-[300px]">
                 <div className=" px-3 pb-4 pt-5 sm:p-6 sm:pb-2">

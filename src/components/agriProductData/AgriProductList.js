@@ -60,30 +60,16 @@ const AgriProductList = () => {
   });
 
   return (
-    <div className="w-full overflow-hidden">
-      <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}>
-          <FarmerNavbar />
-        </div>
-      </div>
+    <div className="w-full">
+      <FarmerNavbar />
       <div className={`${styles.flexStart}`}>
         <video
+          src={tradeVideo}
           autoPlay
           loop
           muted
-          style={{
-            position: "absolute",
-            width: "100%",
-            left: "50%",
-            top: "50%",
-            height: "100%",
-            objectFit: "cover",
-            transform: "translate(-50%, -50%)",
-            zIndex: "-1",
-          }}
-        >
-          <source src={tradeVideo} type="video/mp4" />
-        </video>
+          className="object-cover fixed z-[-1] w-full h-full"
+        />
       </div>
       <div
         className={`flex-1 ${styles.flexCenter} flex-col xl:px-0 sm:px-10 px-1 py-0 sm:py-1`}
@@ -211,7 +197,7 @@ const AgriProductList = () => {
         <h3 className="text-white text-l sm:text-3xl font-medium">
           Result Table of Products
         </h3>
-        <div className="border-x border-white rounded-sm mt-3">
+        <div className="border-x border-white rounded-sm mt-3 overflow-auto sm:h-[35vh] h-[58vh] no-scrollbar ">
           <table className="w-full text-white table-auto">
             <thead className="bg-neutral-400">
               <tr>

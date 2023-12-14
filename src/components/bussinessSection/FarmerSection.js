@@ -81,30 +81,16 @@ const FarmerSection = () => {
   };
 
   return (
-    <div className="w-full overflow-hidden">
-      <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}>
-          <FarmerNavbar />
-        </div>
-      </div>
+    <div className="w-full">
+      <FarmerNavbar />
       <div className={`${styles.flexStart}`}>
         <video
+          src={tradeVideo}
           autoPlay
           loop
           muted
-          style={{
-            position: "absolute",
-            width: "100%",
-            left: "50%",
-            top: "50%",
-            height: "100%",
-            objectFit: "cover",
-            transform: "translate(-50%, -50%)",
-            zIndex: "-1",
-          }}
-        >
-          <source src={tradeVideo} type="video/mp4" />
-        </video>
+          className="object-cover fixed z-[-1] w-full h-full"
+        />
       </div>
       <div
         className={`flex-1 ${styles.flexCenter} flex-col xl:px-0 sm:px-16 px-3`}
@@ -337,7 +323,7 @@ const FarmerSection = () => {
                           name="pName"
                           id="pName"
                           placeholder="select-the-type"
-                          className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:text-xl sm:leading-8 `}
+                          className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:text-l sm:leading-8 `}
                           disabled
                         />
                       )}
@@ -394,7 +380,7 @@ const FarmerSection = () => {
                         type="number"
                         name="qty"
                         id="qty"
-                        className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:text-xl sm:leading-8 ${
+                        className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:text-l sm:leading-8 ${
                           errors.pType ? "input_Error" : ""
                         }`}
                         value={values.qty}
@@ -425,7 +411,7 @@ const FarmerSection = () => {
                         type="number"
                         name="qtyRs"
                         id="qtyRs"
-                        className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:text-xl sm:leading-8 ${
+                        className={`block w-full rounded-md border px-1 py-1 sm:px-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 text-sm leading-2 sm:text-l sm:leading-8 ${
                           errors.pType ? "input_Error" : ""
                         }`}
                         value={values.qtyRs}
@@ -461,11 +447,11 @@ const FarmerSection = () => {
         </div>
       </div>
 
-      <div className="backdrop-blur-sm sm:backdrop-blur-md px-1 pt-2 sm:px-4 pb-4 rounded-sm border border-white flex-1 sm:m-2 m-1 mt-2">
+      <div className="backdrop-blur-sm sm:backdrop-blur-md px-1 pt-2 sm:px-4 pb-4 rounded-sm border border-white flex-1 sm:m-2 m-1 mt-2 ">
         <h3 className="text-white text-l sm:text-2xl font-medium">
           Products Table
         </h3>
-        <div className="border-x border-white rounded-sm mt-2 overflow-scroll no-scrollbar ">
+        <div className="border-x border-white rounded-sm mt-2 overflow-auto sm:h-[27vh] h-[50vh] no-scrollbar ">
           <table className="w-full text-white">
             <thead className="bg-neutral-400">
               <tr>

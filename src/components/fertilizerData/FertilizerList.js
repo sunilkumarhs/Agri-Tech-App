@@ -18,30 +18,16 @@ const FertilizerList = () => {
     setProducts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
   };
   return (
-    <div className="w-full overflow-hidden">
-      <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}>
-          <FarmerNavbar />
-        </div>
-      </div>
+    <div className="w-full">
+      <FarmerNavbar />
       <div className={`${styles.flexStart}`}>
         <video
+          src={tradeVideo}
           autoPlay
           loop
           muted
-          style={{
-            position: "absolute",
-            width: "100%",
-            left: "50%",
-            top: "50%",
-            height: "100%",
-            objectFit: "cover",
-            transform: "translate(-50%, -50%)",
-            zIndex: "-1",
-          }}
-        >
-          <source src={tradeVideo} type="video/mp4" />
-        </video>
+          className="object-cover fixed z-[-1] w-full h-full"
+        />
       </div>
       <div
         className={`flex-1 ${styles.flexCenter} flex-col xl:px-0 sm:px-16 px-3`}
@@ -51,11 +37,11 @@ const FertilizerList = () => {
           Section
         </label>
       </div>
-      <div className="backdrop-blur-sm sm:backdrop-blur-md px-1 pt-2 sm:px-4 sm:pt-3 pb-4 rounded-sm border border-white flex-1 sm:m-2 m-1 mt-2">
+      <div className="backdrop-blur-sm sm:backdrop-blur-md px-1 pt-2 sm:px-4 sm:pt-3 pb-4 rounded-sm border border-white flex-1 m-1 mt-2">
         <h3 className="text-white text-l sm:text-3xl font-medium">
           Fertilizers Price
         </h3>
-        <div className="border-x border-white rounded-sm mt-3">
+        <div className="border-x border-white rounded-sm mt-3 overflow-auto sm:h-[60vh] h-[80vh] no-scrollbar">
           <table className="w-full text-white table-auto">
             <thead className="bg-neutral-400">
               <tr>
