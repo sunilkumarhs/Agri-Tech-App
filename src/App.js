@@ -12,6 +12,12 @@ import BuyerPrfEdit from "./components/loginSection/BuyerPrfEdit";
 import BuyerSection from "./components/bussinessSection/BuyerSection";
 import FertilizerList from "./components/fertilizerData/FertilizerList";
 import AgriProductList from "./components/agriProductData/AgriProductList";
+import SoilTestMainPage from "./components/soilTesting/SoilTestMainPage";
+import SoilTestAboutUs from "./components/soilTesting/SoilTestAboutUs";
+import SoilTestContactUs from "./components/soilTesting/SoilTestContactUs";
+import SoilTestReport from "./components/soilTesting/SoilTestReport";
+import SoilLawnGardenTest from "./components/soilTesting/soilTestServices/SoilLawnGardenTest";
+import SoilCollectionSteps from "./components/soilTesting/soilTestServices/SoilCollectionSteps";
 
 const AppLayout = () => {
   return (
@@ -65,6 +71,30 @@ const appRouter = createBrowserRouter([
       {
         path: "/AgriProductList",
         element: <AgriProductList />,
+      },
+      {
+        path: "/SoilTestMainPage",
+        element: <SoilTestMainPage />,
+      },
+      {
+        path: "/SoilTestAboutUs",
+        element: <SoilTestAboutUs />,
+      },
+      {
+        path: "/SoilTestContactUs",
+        element: <SoilTestContactUs />,
+      },
+      {
+        path: "/SoilTestReport",
+        element: <SoilTestReport />,
+      },
+      {
+        path: "/SoilLawnGardenTest",
+        element: <SoilLawnGardenTest />,
+      },
+      {
+        path: "/SoilCollectionSteps",
+        element: <SoilCollectionSteps />,
       },
     ],
     errorElement: <Error />,

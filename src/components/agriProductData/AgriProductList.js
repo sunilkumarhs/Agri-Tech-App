@@ -75,7 +75,7 @@ const AgriProductList = () => {
         className={`flex-1 ${styles.flexCenter} flex-col xl:px-0 sm:px-10 px-1 py-0 sm:py-1`}
       >
         <div className="mx-auto mt-1 sm:mt-2 max-w-2xl rounded-2xl border border-white lg:mx-0 lg:flex lg:max-w-none">
-          <div className="p-1 sm:p-3 lg:flex-auto">
+          <div className="p-1 sm:p-2 lg:flex-auto">
             <h3 className="text-l mb-1 font-bold tracking-tight text-white sm:text-3xl text-center">
               Please Select your Region to View the Prices
             </h3>
@@ -193,7 +193,7 @@ const AgriProductList = () => {
         </div>
       </div>
 
-      <div className="backdrop-blur-sm sm:backdrop-blur-md px-1 pt-2 sm:px-4 sm:pt-3 pb-4 rounded-sm border border-white flex-1 sm:m-2 m-1 mt-2">
+      <div className="backdrop-blur-sm sm:backdrop-blur-md px-1 pt-2 sm:px-4 sm:pt-2 pb-4 rounded-sm border border-white flex-1 sm:m-2 m-1 mt-2">
         <h3 className="text-white text-l sm:text-3xl font-medium">
           Result Table of Products
         </h3>

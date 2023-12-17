@@ -32,7 +32,7 @@ const FertilizerList = () => {
       <div
         className={`flex-1 ${styles.flexCenter} flex-col xl:px-0 sm:px-16 px-3`}
       >
-        <label className="flex-1 font-poppins font-bold sm:text-6xl text-l mt-0 sm:mt-2 text-white leading-8 sm:leading-16">
+        <label className="flex-1 font-poppins font-bold sm:text-4xl text-l mt-0 sm:mt-2 text-white leading-8 sm:leading-16">
           Welcome To <span className="text-gradient">Fertilizers Price </span>
           Section
         </label>

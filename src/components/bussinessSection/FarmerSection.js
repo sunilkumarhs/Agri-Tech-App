@@ -95,7 +95,7 @@ const FarmerSection = () => {
       <div
         className={`flex-1 ${styles.flexCenter} flex-col xl:px-0 sm:px-16 px-3`}
       >
-        <label className="flex-1 font-poppins font-bold sm:text-4xl text-l mt-0 sm:mt-2 text-white leading-8 sm:leading-14">
+        <label className="flex-1 font-poppins font-bold sm:text-4xl text-l mt-0 sm:mt-1 text-white leading-8 sm:leading-14">
           Welcome To <span className="text-gradient">Farmer Trading </span>
           Section
         </label>
@@ -103,7 +103,7 @@ const FarmerSection = () => {
       <div
         className={`flex-1 ${styles.flexCenter} flex-col xl:px-0 sm:px-10 px-1`}
       >
-        <div className="mx-auto mt-1 sm:mt-5 max-w-2xl rounded-2xl border border-white lg:mx-0 lg:flex lg:max-w-none">
+        <div className="mx-auto mt-1 sm:mt-3 max-w-2xl rounded-2xl border border-white lg:mx-0 lg:flex lg:max-w-none">
           <div className="p-1 sm:p-3 lg:flex-auto">
             <h3 className="text-l mb-1 font-bold tracking-tight text-white sm:text-2xl">
               Add Your Products
